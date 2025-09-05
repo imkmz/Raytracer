@@ -1,0 +1,93 @@
+{
+    "image": {
+        "width": 800,
+        "height": 600,
+        "samples_per_pixel": 1000,
+        "max_depth": 50
+    },
+    "camera": {
+        "lookfrom": [0, 2, 4],
+        "lookat": [0, 0, 0],
+        "vup": [0, 1, 0],
+        "vfov": 60,
+        "aperture": 0.1,
+        "focus_dist": 5.0
+    },
+    "materials": {
+        "red_metal": {
+            "type": "metal",
+            "albedo": [0.8, 0.2, 0.2],
+            "fuzz": 0.1
+        },
+        "blue_metal": {
+            "type": "metal",
+            "albedo": [0.2, 0.2, 0.8],
+            "fuzz": 0.2
+        },
+        "green_metal": {
+            "type": "metal",
+            "albedo": [0.2, 0.8, 0.2],
+            "fuzz": 0.3
+        },
+        "glass": {
+            "type": "dielectric",
+            "refraction_index": 1.5
+        },
+        "floor": {
+            "type": "lambertian",
+            "albedo": [0.8, 0.8, 0.8]
+        }
+    },
+    "objects": [
+        {
+            "type": "cone",
+            "apex": [0, 2, 0],
+            "axis": [0, -1, 0],
+            "angle": 30,
+            "height": 2.0,
+            "material": "red_metal"
+        },
+        {
+            "type": "cone",
+            "apex": [-2, 1.5, -2],
+            "axis": [0, -1, 0],
+            "angle": 25,
+            "height": 1.5,
+            "material": "blue_metal"
+        },
+        {
+            "type": "cone",
+            "apex": [2, 1.5, -2],
+            "axis": [-0, -1, 0],
+            "angle": 25,
+            "height": 1.5,
+            "material": "green_metal"
+        },
+        {
+            "type": "cone",
+            "apex": [0, 1, 2],
+            "axis": [0, -1, 0],
+            "angle": 20,
+            "height": 1.0,
+            "material": "glass"
+        },
+        {
+            "type": "sphere",
+            "center": [0, -1, 0],
+            "radius": 1.0,
+            "material": "floor"
+        },
+        {
+            "type": "sphere",
+            "center": [-3, 0.5, -3],
+            "radius": 0.5,
+            "material": "glass"
+        },
+        {
+            "type": "sphere",
+            "center": [3, 0.5, -3],
+            "radius": 0.5,
+            "material": "glass"
+        }
+    ]
+} 

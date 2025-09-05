@@ -1,0 +1,33 @@
+{
+  "image": {
+    "width": 800,
+    "height": 600,
+    "samples_per_pixel": 10,
+    "max_depth": 10
+  },
+  "camera": {
+    "lookfrom": [0, 2, 5],
+    "lookat": [0, 0, 0],
+    "vup": [0, 1, 0],
+    "vfov": 40.0,
+    "aperture": 0.0,
+    "focus_dist": 5.0
+  },
+  "objects": [
+    {
+      "type": "triangle",
+      "left": [-1, 0, 0],
+      "right": [1, 0, 0],
+      "top": [0, 1.5, 0],
+      "material": {
+        "type": "metal",
+        "albedo": [0.3, 0.8, 0.3],
+        "fuzz": 0.1
+      },
+      "rotate": {
+        "axis": [1, 0, 0],
+        "angle": 180
+      }
+    }
+  ]
+}

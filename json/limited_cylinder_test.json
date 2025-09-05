@@ -1,0 +1,34 @@
+{
+    "image": {
+        "width": 800,
+        "height": 600,
+        "samples_per_pixel": 1,
+        "max_depth": 50
+    },
+    "camera": {
+        "lookfrom": [2, -3, 5],
+        "lookat": [0, 0, 0],
+        "vup": [0, 1, 0],
+        "vfov": 60,
+        "aperture": 0.1,
+        "focus_dist": 5.0
+    },
+    "materials": {
+        "red_metal": {
+            "type": "metal",
+            "albedo": [0.8, 0.2, 0.2],
+            "fuzz": 0.1
+        }
+    },
+    "objects": [
+        {
+            "type": "limited_cylinder",
+            "base_center": [0, -1, 0],
+            "axis": [0, 1, 0],
+            "radius": 1.0,
+            "min_height": 0.0,
+            "max_height": 2.0,
+            "material": "red_metal"
+        }
+    ]
+} 

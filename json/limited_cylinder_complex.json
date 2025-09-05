@@ -1,0 +1,98 @@
+{
+    "image": {
+        "width": 1200,
+        "height": 800,
+        "samples_per_pixel": 20,
+        "max_depth": 50
+    },
+    "camera": {
+        "lookfrom": [5, 3, 8],
+        "lookat": [0, 0, 0],
+        "vup": [0, 1, 0],
+        "vfov": 60,
+        "aperture": 0.1,
+        "focus_dist": 10.0
+    },
+    "materials": {
+        "red_metal": {
+            "type": "metal",
+            "albedo": [0.8, 0.2, 0.2],
+            "fuzz": 0.1
+        },
+        "blue_metal": {
+            "type": "metal",
+            "albedo": [0.2, 0.2, 0.8],
+            "fuzz": 0.2
+        },
+        "green_metal": {
+            "type": "metal",
+            "albedo": [0.2, 0.8, 0.2],
+            "fuzz": 0.3
+        },
+        "glass": {
+            "type": "dielectric",
+            "refraction_index": 1.5
+        },
+        "mirror": {
+            "type": "metal",
+            "albedo": [0.9, 0.9, 0.9],
+            "fuzz": 0.0
+        }
+    },
+    "objects": [
+        {
+            "type": "limited_cylinder",
+            "base_center": [0, 0, 0],
+            "axis": [0, 1, 0],
+            "radius": 1.0,
+            "min_height": 0.0,
+            "max_height": 2.0,
+            "material": "red_metal"
+        },
+        {
+            "type": "limited_cylinder",
+            "base_center": [3, 0, 0],
+            "axis": [0, 1, 0],
+            "radius": 0.8,
+            "min_height": 0.0,
+            "max_height": 2.5,
+            "material": "blue_metal"
+        },
+        {
+            "type": "limited_cylinder",
+            "base_center": [-3, 0, 0],
+            "axis": [0, 1, 0],
+            "radius": 0.8,
+            "min_height": 0.0,
+            "max_height": 2.5,
+            "material": "green_metal"
+        },
+        {
+            "type": "limited_cylinder",
+            "base_center": [0, 0, 3],
+            "axis": [0, 1, 0],
+            "radius": 0.5,
+            "min_height": 0.0,
+            "max_height": 3.0,
+            "material": "glass"
+        },
+        {
+            "type": "limited_cylinder",
+            "base_center": [0, 0, -3],
+            "axis": [0, 1, 0],
+            "radius": 0.5,
+            "min_height": 0.0,
+            "max_height": 3.0,
+            "material": "mirror"
+        },
+        {
+            "type": "sphere",
+            "center": [0, -1000, 0],
+            "radius": 1000,
+            "material": {
+                "type": "lambertian",
+                "albedo": [0.5, 0.5, 0.5]
+            }
+        }
+    ]
+} 

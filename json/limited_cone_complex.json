@@ -1,0 +1,111 @@
+{
+    "image": {
+        "width": 1920,
+        "height": 1080,
+        "samples_per_pixel": 500,
+        "max_depth": 50
+    },
+    "camera": {
+        "lookfrom": [5, 3, 8],
+        "lookat": [0, 0, 0],
+        "vup": [0, 1, 0],
+        "vfov": 60,
+        "aperture": 0.1,
+        "focus_dist": 10.0
+    },
+    "materials": {
+        "red_metal": {
+            "type": "metal",
+            "albedo": [0.8, 0.2, 0.2],
+            "fuzz": 0.1
+        },
+        "blue_metal": {
+            "type": "metal",
+            "albedo": [0.2, 0.2, 0.8],
+            "fuzz": 0.2
+        },
+        "green_metal": {
+            "type": "metal",
+            "albedo": [0.2, 0.8, 0.2],
+            "fuzz": 0.15
+        },
+        "gold": {
+            "type": "metal",
+            "albedo": [1.0, 0.8, 0.0],
+            "fuzz": 0.05
+        },
+        "glass": {
+            "type": "dielectric",
+            "refraction_index": 1.5
+        },
+        "floor": {
+            "type": "lambertian",
+            "albedo": [0.8, 0.8, 0.8]
+        }
+    },
+    "objects": [
+        {
+            "type": "limited_cone",
+            "base_center": [0, 2, 0],
+            "axis": [0, 1, 0],
+            "angle": 30,
+            "min_height": 0.5,
+            "max_height": 2.0,
+            "material": "red_metal"
+        },
+        {
+            "type": "limited_cone",
+            "base_center": [3, 2, 0],
+            "axis": [0.5, 1, 0.5],
+            "angle": 25,
+            "min_height": 0.3,
+            "max_height": 1.8,
+            "material": "blue_metal"
+        },
+        {
+            "type": "limited_cone",
+            "base_center": [-3, 2, 0],
+            "axis": [-0.5, 1, 0.5],
+            "angle": 35,
+            "min_height": 0.4,
+            "max_height": 2.2,
+            "material": "green_metal"
+        },
+        {
+            "type": "limited_cone",
+            "base_center": [0, 2, 3],
+            "axis": [0, 1, 0],
+            "angle": 20,
+            "min_height": 0.6,
+            "max_height": 1.5,
+            "material": "gold"
+        },
+        {
+            "type": "limited_cone",
+            "base_center": [0, 2, -3],
+            "axis": [0, 1, 0],
+            "angle": 40,
+            "min_height": 0.2,
+            "max_height": 2.5,
+            "material": "glass"
+        },
+        {
+            "type": "sphere",
+            "center": [0, -100.5, 0],
+            "radius": 100,
+            "material": "floor"
+        },
+        {
+            "type": "sphere",
+            "center": [4, 0.5, 4],
+            "radius": 0.5,
+            "material": "gold"
+        },
+        {
+            "type": "sphere",
+            "center": [-4, 0.5, -4],
+            "radius": 0.5,
+            "material": "glass"
+        }
+    ]
+} 
